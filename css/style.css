@@ -6,6 +6,7 @@
 
 body {
     background-color: #ccc;
+    font-family: 'Lato', sans-serif;
 }
 
 .header {
@@ -41,6 +42,7 @@ img {
     background-color: #ccd;
     display: flex;
     justify-content: space-between;
+    border-right: 1px solid #888;
 }
 
 .account > div {
@@ -82,12 +84,45 @@ img {
     color: #888;
 }
 
+    /* search */
 .search {
     background-color: #fff;
+    padding: 5px;
 }
 
+.search input {
+    width: 90%;
+}
+
+    /* list */
 .list {
     background-color: #fff;
+    max-height: fit-content;
+    overflow-y: scroll;
+}
+
+.list .img_container {
+    margin: 0 10px;
+}
+
+.contact {
+    padding: 5px 0;
+    display: flex;
+    cursor: pointer;
+}
+
+.contact span {
+    display: block;
+    margin-bottom: -5px;
+}
+
+.contact small {
+    font-size: x-small;
+    color: #ccd;
+}
+
+.contact div:last-child {
+    align-content: flex-end;
 }
 
 /* chat */
@@ -96,6 +131,32 @@ img {
     height: 100%;
 }
 
-.contact {
+    /* active contact */
+.active_contact {
     background-color: #ccd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info {
+    padding: 5px;
+    display: flex;
+    gap: 10px;
+}
+
+.active_contact .img_container {
+    cursor: pointer;
+}
+
+.info small {
+    display: block;
+    font-size: x-small;
+    color: #888;
+}
+
+.active_contact i {
+    margin-right: 10px;
+    color: #888;
+    cursor: pointer;
 }
