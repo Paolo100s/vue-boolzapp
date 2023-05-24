@@ -196,6 +196,11 @@ createApp({
                 }
             ]
         }
+    },
+    methods: {
+        select: function(i){
+            this.activeContact = i;
+        }
     }
 
 }).mount("#container");

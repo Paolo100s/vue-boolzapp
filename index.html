@@ -48,19 +48,21 @@
 
                 <div class="search">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="search" name="search-chat" placeholder="Cerca o inizia una nuova chat">
-                    
+                    <input type="search" name="search-chat" placeholder="Cerca o inizia una nuova chat"> 
                 </div>
 
                 <div class="list">
-                    <div class="contact" v-for="(contact, index) in contacts">
-                        <div class="img_container">
-                            <img :src="contact.avatar" alt="avatar">
-                        </div>
+                    <div class="contact" v-for="(contact, index) in contacts" @click="select(index)">
                         <div>
-                            <span>{{contact.name}}</span>
-                            <small>Ultimo messaggio inviato</small>
+                            <div class="img_container">
+                                <img :src="contact.avatar" alt="avatar">
+                            </div>
+                            <div>
+                                <span>{{contact.name}}</span>
+                                <small>Ultimo messaggio inviato</small>
+                            </div>
                         </div>
+                        
                         <div>
                             <small>12:00</small>
                         </div>
@@ -90,11 +92,27 @@
                 </div>
 
                 <div class="chat">
-
+                    <div class="view_chat">
+                        <div class="message" v-for="(item, index) in contacts[activeContact].messages"
+                        :class="item.status">
+                            <span>{{item.message}}</span>
+                            <small>{{item.date}}</small>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="to_write">
+                    <div>
+                        <i class="fa-regular fa-face-smile"></i>
+                    </div>
 
+                    <div>
+                        <input type="text" size="80" placeholder="Scrivi un messaggio">
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-microphone"></i>
+                    </div>
                 </div>
             </div>
 
