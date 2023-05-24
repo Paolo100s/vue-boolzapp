@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ccc;
+}
+
+.header {
+    height: 15vh;
+    background-color: rgb(26, 160, 131);
+}
+
+#container {
+    width: 80vw;
+    height: 90vh;
+    position: fixed;
+    z-index: 2;
+    top: 5vh;
+    left: 10vw;
+    display: flex;
+}
+
+.img_container {
+    width: 40px;
+}
+
+img {
+    width: 100%;
+}
+
+/* side */
+.side {
+    width: 30%;
+    height: 100%;
+}
+    /* account */
+.account {
+    background-color: #ccd;
+    display: flex;
+    justify-content: space-between;
+}
+
+.account > div {
+    display: flex;
+    align-items: center;
+}
+
+.account .img_container {
+    margin: 5px;
+    cursor: pointer;
+}
+
+.account i {
+    margin-right: 10px;
+    color: #888;
+    cursor: pointer;
+}
+
+    /* notifications */
+.notifications {
+    background-color: rgb(72, 206, 206);
+    display: flex;
+    align-items: center;
+}
+
+.notifications div:first-child {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.notifications i {
+    color: rgb(72, 206, 206);
+}
+
+.notifications a {
+    color: #888;
+}
+
+.search {
+    background-color: #fff;
+}
+
+.list {
+    background-color: #fff;
+}
+
+/* chat */
+.chat_container {
+    width: 70%;
+    height: 100%;
+}
+
+.contact {
+    background-color: #ccd;
+}
