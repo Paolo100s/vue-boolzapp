@@ -33,6 +33,7 @@ createApp({
         return {
             activeContact: 0,
             newMessage: '',
+            timer: 0,
             contacts: [
                 {
                     name: 'Michele',
@@ -211,12 +212,24 @@ createApp({
                     status: 'sent'
                 };
 
-                console.log(newItem);
-
-                this.contact[this.activeContact].messages.push(newItem);
+                this.contacts[this.activeContact].messages.push(newItem);
 
                 this.newMessage = '';
+
+                setTimeout(this.receiveMessage, 3000);
             }
+        },
+
+        receiveMessage: function(){
+            const newItemReceived = {
+                date: 'Now',
+                message: 'Ok',
+                status: 'received'
+            }
+
+            this.contacts[this.activeContact].messages.push(newItemReceived);
+
+            
         }
     }
 

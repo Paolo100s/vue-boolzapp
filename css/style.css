@@ -177,6 +177,7 @@ img {
     background-image: url('../img/default_background.jpg');
     filter: blur(0.8);
     height: 82%;
+    overflow-y: scroll;
 }
 
 .view_chat {
