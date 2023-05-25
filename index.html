@@ -107,7 +107,8 @@
                     </div>
 
                     <div>
-                        <input type="text" size="80" placeholder="Scrivi un messaggio">
+                        <input type="text" size="80" placeholder="Scrivi un messaggio" v-model="newMessage"
+                        @keyup.enter="addMessage">
                     </div>
 
                     <div>

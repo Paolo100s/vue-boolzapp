@@ -15,12 +15,12 @@ body {
 }
 
 #container {
-    width: 80vw;
-    height: 90vh;
+    width: 80%;
+    height: 90%;
     position: fixed;
     z-index: 2;
-    top: 5vh;
-    left: 10vw;
+    top: 5%;
+    left: 10%;
     display: flex;
 }
 

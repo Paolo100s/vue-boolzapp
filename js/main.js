@@ -32,6 +32,7 @@ createApp({
     data() {
         return {
             activeContact: 0,
+            newMessage: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -200,6 +201,22 @@ createApp({
     methods: {
         select: function(i){
             this.activeContact = i;
+        },
+
+        addMessage: function(){
+            if(this.newMessage !== '') {
+                const newItem = {
+                    date: 'Now',
+                    message: this.newMessage,
+                    status: 'sent'
+                };
+
+                console.log(newItem);
+
+                this.contact[this.activeContact].messages.push(newItem);
+
+                this.newMessage = '';
+            }
         }
     }
 
