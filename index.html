@@ -48,11 +48,12 @@
 
                 <div class="search">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="search" name="search-chat" placeholder="Cerca o inizia una nuova chat"> 
+                    <input type="search" name="search-chat" placeholder="Cerca o inizia una nuova chat" 
+                    v-model="search"> 
                 </div>
 
                 <div class="list">
-                    <div class="contact" v-for="(contact, index) in contacts" @click="select(index)">
+                    <div class="contact" v-for="(contact, index) in contacts.filter(contact=>contact.name.includes(search))" @click="select(index)">
                         <div>
                             <div class="img_container">
                                 <img :src="contact.avatar" alt="avatar">

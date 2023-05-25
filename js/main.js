@@ -33,7 +33,7 @@ createApp({
         return {
             activeContact: 0,
             newMessage: '',
-            timer: 0,
+            search: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -227,9 +227,7 @@ createApp({
                 status: 'received'
             }
 
-            this.contacts[this.activeContact].messages.push(newItemReceived);
-
-            
+            this.contacts[this.activeContact].messages.push(newItemReceived);   
         }
     }
 
